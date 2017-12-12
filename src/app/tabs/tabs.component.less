@@ -1,0 +1,66 @@
+@import "./../../styles.less";
+
+//Regular Tabs
+.tabs-container{
+    height: 40px;
+	background: @app-black; // Maybe make this semi transparent?
+}
+
+.tab{
+	font-family: 'Lobster', cursive;
+	font-size: 1.1em;
+	width: 120px;
+  	padding-top: 10px;
+  	padding-left: 20px;
+	padding-right: 20px;
+	color: @app-white;
+
+	display: flex;
+	justify-content: center;
+}
+
+.tab:hover{
+	color: @secondary;
+	border-bottom: none;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+	font-weight: bold;
+}
+
+.tab.selected{
+	border-bottom: none;
+	box-shadow: inset 0 3px 0 @secondary;
+	color: @secondary;
+	outline: none;
+	background-color: @primary;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+//Sub tabs
+.sub-tabs-container{
+	font-family: 'Lobster', cursive;
+    height: 40px;
+    background-color: @app-white;
+    color: @app-black;
+    font-weight: bold;
+    border-radius: 5px;
+
+    justify-content: center;
+}
+
+.sub-tab{
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sub-tab:hover{
+    color: @accent1;
+}
+
+.sub-tab.selected{
+    color: @accent1;
+	border-bottom: 3px solid @accent1;
+	outline: none;
+}

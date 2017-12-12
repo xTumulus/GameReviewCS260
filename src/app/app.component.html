@@ -1,0 +1,25 @@
+<div id="page-header">
+  <app-header (selectedTab)="selectedTab = $event"></app-header>
+</div>
+
+<div id="main-container">
+  <app-side-title></app-side-title> <!-- I want this to dissapear on smaller pages-->
+  <div class="app-body">
+    <div id="tabs-container">
+      <app-tabs (selectedTab)="selectedTab = $event" [tabRoutes]="tabRoutes" [isSubTab]="false"></app-tabs>
+    </div>
+      <div class="tab-content">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+  <div id="adds-container">
+    <p>
+      This will eventually hold adds
+      This is to test ssh...
+    </p>
+  </div>
+</div>
+
+<div id="page-footer">
+  <app-footer></app-footer>
+</div>

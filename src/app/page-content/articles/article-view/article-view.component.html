@@ -1,0 +1,33 @@
+
+<app-tabs (selectedTab)="selectedArticle" [tabRoutes]="articleSortRoutes" [isSubTab]="true"></app-tabs>
+<div class="row">
+  <div id="side-nav">
+    <app-side-nav [navOptions]="articleList" (selectedItem) ="selectedArticle = $event"></app-side-nav>
+      <!-- <div class="article-title">{{ article.title }}</div>    This should display when the link above is selected
+      <div class="author">{{ article.author }}</div>
+      <p class="article-content">{{ article.content }}</p> -->
+    <br>
+      <button md-button class="button primary" (click)="openArticleDialog()">New</button>
+      <button md-button class="button primary" (click)="openArticleDialog()">Edit</button>
+  </div>
+  <div class="article-body">
+    <div class="row">
+      <div class="article-image">
+        <!-- <img src="{{ article.image }}"> Use "(article | async)?" instead of "article" -->
+      </div>
+      <div class="article-header column">
+        <h1>{{ selectedArticle.game }} Review:</h1>
+        <div class="row">
+          <h2>{{ selectedArticle.title }}</h2>
+          <h2>{{ selectedArticle.author }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="article-content" [innerHTML]="selectedArticle.content">
+      <!-- {{ selectedArticle.content }} -->
+    </div>
+    <div class="article-comments">
+        {{ article.comments }}
+    </div>
+  </div>
+</div>

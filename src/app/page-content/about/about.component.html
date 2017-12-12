@@ -1,0 +1,60 @@
+<div id="about-content column">
+  <div class="about-header centered">
+    <h1 class="about-title">Thanks For Visiting</h1>
+  </div>
+  <p class="main-text-header">
+    We're Retrospectre, a site dedicated to examining the impact and significance of video games through 
+    retrospective reviews. Specifically, we review games taking into special consideration how they have 
+    been effected by the passing of time and changes in the video game industry and game medium. 
+  </p>
+  <div class="video-container">
+    This will be a video
+  </div>
+  <div id="mission-statement" class="column centered">
+      <h1>Mission Statement</h1>
+      <p class="main-text">
+        To encourage the meaningful examination of games by their audiences and to celebrate games of truly lasting value. 
+      </p>
+  </div>
+  <div class="row about-text">  
+    <div class="column about-right">
+      <h3>About Us</h3>
+      <p class="secondary-text">
+        Due to the demanding deadlines of much of mainstream games journalism, it is often difficult for 
+        reviewers to truly give the time we feel is necessary to adequately review games. As a bare minimum,
+        each of us will fully complete the main campaign, story, or primary mode of play of any game we review 
+        and then allow ample time for reflection. Included with each review will be brief notes 
+        on the content the reviewer did fully experience. For our reviews, we try to choose games that we 
+        believe should be reexamined after time has passed to better understand their relevance today. A game 
+        must be at least two years old to be considered for a review. 
+      </p>
+    </div>
+    <div class="column about-left">
+      <h3>Why It Matters</h3>
+        <p class="secondary-text">
+          There seems to be little meaningful reflection on videogames today. Currently, release reviews are the 
+          standard and secondary reviews only come after significant patches or remastered versions. Very 
+          little is done to look at a game's contribution in the time after its release. Further more, many 
+          games require significant time investment to get a full experience. This is often not possible when
+          reviewers have only a few days to play and ponder a game. Altogether, the review process has become a 
+          bit shallow. The depth of book discussions and film reviews is rarely emulated in the gaming industry.
+          We aim to consider and discuss games in the same way that powerful literature and film are pondered and 
+          reviewed today.
+        </p>
+    </div>  
+  </div>
+  <div id="reviewer-sections">
+    <h2 class="centered">Meet Our Reviewers</h2>
+    <div class="row reviewer-bios">
+      <div class="reviewer-container column" *ngFor="let bio of reviewerBios">
+        <!-- <img src="circle.png" alt="icon for each reviewer"> -->
+        <div id="circle-place-holder"></div>
+        <a routerLink='/bios' class="reviewer-name">{{bio.name}}</a>
+        <p>{{bio.intro}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="contact-us">
+    <a routerLink='/contact'><button class="button nav">Contact Us</button></a>
+  </div>
+</div>

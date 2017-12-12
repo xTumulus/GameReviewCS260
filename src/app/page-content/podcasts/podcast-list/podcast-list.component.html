@@ -1,0 +1,13 @@
+
+<app-tabs (selectedTab)="selectedPodcast" [tabRoutes]="podcastSortRoutes" [isSubTab]="true"></app-tabs>
+<div id="side-nav">
+  <!-- <app-tabs (selectedTab)="selectedTab = $event" [tabTitles]="articleTitles"></app-tabs> -->
+  <app-side-nav [navOptions]="podcastList"></app-side-nav>
+    <!-- <div class="article-title">{{ article.title }}</div>    This should display when the link above is selected
+    <div class="author">{{ article.author }}</div>
+    <p class="article-content">{{ article.content }}</p> -->
+  <br>
+    <button (click)="openArticleDialog()">New</button> <!-- I need to get these to route correctly (To a modal if I can) -->
+    <button (click)="openArticleDialog()">Edit</button>
+</div>
+<router-outlet></router-outlet> <!-- This isn't working -->

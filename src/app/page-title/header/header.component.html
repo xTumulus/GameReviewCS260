@@ -1,0 +1,47 @@
+<div id="header-bar">
+  <div id="header-content">
+    <h1>R</h1>
+    <img src="../../assets/mascot.png" height='90px' width='120px'>
+    <h1>S</h1>
+  </div>
+  <button md-button [mdMenuTriggerFor]='loginMenu' class="button dropdown account-button" *ngIf="!(authService.user | async)?.uid">
+    <i class="material-icons">person_outline</i> Login
+  </button>
+    <md-menu #loginMenu="mdMenu" [overlapTrigger]='false'>
+      <button md-menu-item (click)='loginGoogle()'>Google</button>
+      <button md-menu-item (click)='loginFacebook()'>Facebook</button>
+      <button md-menu-item (click)='loginTwitter()'>Twitter</button>
+      <a routerLink='user/login'>
+        <button md-menu-item>Email</button>
+      </a>
+      <a routerLink='user/signup'>
+        <button md-menu-item>Signup with Email</button>
+      </a>
+    </md-menu>
+  <button md-button [mdMenuTriggerFor]='userMenu' class="button dropdown account-button" *ngIf="(authService.user | async)?.uid">
+    <i class="material-icons">person</i> Account
+  </button>
+    <md-menu #userMenu="mdMenu" [overlapTrigger]='false'>
+      <a routerLink='/user'>
+        <button md-menu-item>User Profile</button>
+      </a>
+      <a routerLink='/user/favorites'>
+        <button md-menu-item (click)="onSelectTab(routeToFavorites)" [routerLink]='routeToFavorites'>Favorites</button>
+      </a>
+      <button md-menu-item (click)="logout()">Logout</button>
+    </md-menu>
+  <button md-button [mdMenuTriggerFor]='contactMenu' class="button dropdown contact-menu">
+    <i class="material-icons">contact_mail</i> Contact Us
+  </button>
+    <md-menu #contactMenu="mdMenu" [overlapTrigger]='false'>
+      <a routerLink='contact'>
+        <button md-menu-item (click)="onSelectTab(routeToContact)" [routerLink]='routeToContact'>Reccomend Reviews</button>
+      </a>
+      <a routerLink='contact'>
+          <button md-menu-item (click)="onSelectTab(routeToContact)" [routerLink]='routeToContact'>Site Feedback</button>
+      </a>
+      <a routerLink='contact'>
+        <button md-menu-item (click)="onSelectTab(routeToContact)">Other</button>
+      </a>
+    </md-menu>
+</div>

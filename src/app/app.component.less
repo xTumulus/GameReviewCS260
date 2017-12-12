@@ -1,0 +1,41 @@
+@import "./../styles.less";
+
+#page-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#main-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#side-title{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 500px;
+    height: 100px;
+    padding-left: 20px;
+}
+
+// Should app body have the shadow or should the tab content have the shadow?
+
+.app-body{
+    background-color: @primary;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 1px @app-shadow;
+    overflow: auto;
+    width: 73vw;
+}
+
+.tab-content{
+    margin: 20px;
+    background-color: @app-white;
+    color: @app-black;
+    min-height: 90vh;
+    // box-shadow: 0px 5px 20px 0px @app-shadow;
+    border-radius: 5px;
+}

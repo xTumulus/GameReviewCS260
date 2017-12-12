@@ -1,0 +1,9 @@
+<div class="tabs-container column">
+  <div class="header"></div>
+  <div 
+  class="tab" 
+  *ngFor="let item of navOptions | async" 
+  (click)="onSelectItem(item)" 
+  [routerLinkActive]="['selected']">{{item.game}}</div>
+</div>
+  

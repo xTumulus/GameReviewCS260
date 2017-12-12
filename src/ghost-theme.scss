@@ -1,0 +1,154 @@
+@import '../node_modules/@angular/material/theming';
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+// Plus imports for other components in your app.
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+
+$primary: (
+    50 : #eaebec,
+    100 : #caccd0,
+    200 : #a6aab0,
+    300 : #828890,
+    400 : #686f79,
+    500 : #4d5561,
+    600 : #464e59,
+    700 : #3d444f,
+    800 : #343b45,
+    900 : #252a33,
+    A100 : #7fb0ff,
+    A200 : #4c91ff,
+    A400 : #1971ff,
+    A700 : #0062fe,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$secondary: (
+    50: #ecfaf4,
+    100: #cff3e3,
+    200: #afecd0,
+    300: #8fe4bd,
+    400: #77deae,
+    500: #5fd8a0,
+    600: #57d498,
+    700: #4dce8e,
+    800: #43c884,
+    900: #32bf73,
+    A100: #ffffff,
+    A200: #d2ffe6,
+    A400: #9fffc9,
+    A700: #85ffbb,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$secondary: (
+    50: #ecfaf4,
+    100: #cff3e3,
+    200: #afecd0,
+    300: #8fe4bd,
+    400: #77deae,
+    500: #5fd8a0,
+    600: #57d498,
+    700: #4dce8e,
+    800: #43c884,
+    900: #32bf73,
+    A100: #ffffff,
+    A200: #d2ffe6,
+    A400: #9fffc9,
+    A700: #85ffbb,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$accent: (
+    50: #edebf7,
+    100: #d2ceeb,
+    200: #b4adde,
+    300: #958cd1,
+    400: #7f73c7,
+    500: #685abd,
+    600: #6052b7,
+    700: #5548ae,
+    800: #4b3fa6,
+    900: #3a2e98,
+    A100: #e1deff,
+    A200: #b3abff,
+    A400: #8578ff,
+    A700: #6f5eff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$app-primary: mat-palette($primary);
+$app-accent:  mat-palette($secondary);
+$app-warn:    mat-palette($accent);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($app-theme);

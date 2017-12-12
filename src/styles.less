@@ -1,0 +1,194 @@
+//Material Theme
+// @import '~@angular/material/prebuilt-themes/purple-green.css';
+
+//Global Fonts
+@import url('https://fonts.googleapis.com/css?family=Lobster|Condiment|ABeeZee|Baloo+Bhaina|Carter+One|Montserrat|Oleo+Script|PT+Sans|Poppins|Reem+Kufi|Righteous|Shrikhand|Material+Icons');
+    // font-family: 'Passion One', cursive;
+	// font-family: 'Alegreya Sans SC', sans-serif;
+    // font-family: 'Audiowide', cursive;
+    // font-family: 'PT Sans', sans-serif;
+    // font-family: 'Bowlby One SC', cursive;
+    // font-family: 'Lobster', cursive;
+
+//Global Colors
+@primary:rgba(77, 85, 97, 1.0);
+@secondary: rgba(95, 216, 160, 1.0);
+@secondary-hover: rgba(75, 196, 140, 1.0);
+@app-black: rgba(41, 50, 65, 1.0);
+@app-white: rgba(240, 250, 255, 1.0);
+@accent1: rgba(104, 90, 189, 1.0);
+@accent1-hover: rgb(84, 70, 169);
+@accent2: rgb(21, 250, 92);
+@accent2-hover: rgba(41, 270, 112, 1.0);
+@app-shadow: rgba(0, 0, 0, 0.4);
+
+//Global Element Styles
+body {
+     /* background: url("./assets/dark_grey_noise.png") repeat center center fixed; */
+     background-color: @app-white;
+}
+
+a:link{
+    color: @accent2;
+}
+
+a:visited, a:hover{
+    color: @accent2;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lobster', cursive;
+}
+
+//Global Classes
+    //Buttons
+.button{
+    font-family: 'Oleo Script', cursive;
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
+    font-size: 16px;
+    box-shadow: none;
+    border-radius: 1px;
+    border: 0px;
+    font-weight: bold;
+    color: @app-black;
+    // text-shadow: 1px -1px @app-shadow;
+}
+
+.button:focus{
+    outline: none;
+}
+
+.button.group{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 25px;
+}
+
+.button.primary{
+    background-color: @secondary;
+    height: 30px;
+    width: 85px;
+}
+
+.button.primary:hover,
+.button.primary.hover{
+    background-color: @secondary-hover;
+}
+
+.button.primary:active,
+.button.primary.active{
+    background-color: @secondary-hover;
+}
+
+.button.secondary{
+    background-color: @accent2;
+    height: 30px;
+    width: 85px;
+}
+
+.button.secondary:hover,
+.button.secondary.hover{
+    background-color: @accent2-hover;
+}
+
+.button.secondary:active,
+.button.secondary.active{
+    background-color: @accent2-hover;
+}
+
+.button.nav{
+    // display: flex;
+    background-color: @accent1;
+    color: white;
+    font-weight: normal;
+    height: 30px;
+    width: 105px;
+}
+
+.button.nav:hover,
+.button.nav.hover {
+    background-color: @accent1-hover;
+}
+
+.button.nav:active,
+.button.nav.active {
+    background-color: @accent1-hover;
+}
+
+.button.dropdown{
+    background-color: @app-black;
+    color: white;
+    font-weight: normal;
+    height: 35px;
+    width: 125px;
+    box-shadow: 5px 5px 25px -10px @app-shadow;
+}
+
+.button.dropdown:hover,
+.button.dropdown.hover {
+    background-color: @accent1-hover;
+}
+
+.button.dropdown:active,
+.button.dropdown.active {
+    background-color: @accent1-hover;
+}
+
+    //Other
+.rounded {
+    border-radius: 3px;
+}
+
+.shadow {
+    box-shadow: 3px 3px 5px 6px @app-shadow;
+}
+
+.card {
+    margin-bottom: 0px;
+    margin-right: 0px;
+    padding: 15px;
+    padding-top: 0px;
+    background-color: @secondary;
+    box-shadow: 5px 5px 25px -10px @app-shadow;
+}
+
+.card-flat {
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    box-shadow: 5px 5px 25px -10px @app-shadow;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal{
+    border-radius: 10px;
+    background-color: @primary;
+    box-shadow: @app-shadow;
+}

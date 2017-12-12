@@ -1,0 +1,8 @@
+<div [class.tabs-container]="!isSubTab" [class.sub-tabs-container]="isSubTab" class="row">
+  <div 
+  [class.tab]="!isSubTab" [class.sub-tab]="isSubTab" 
+  *ngFor="let route of tabRoutes" 
+  (click)="onSelectTab(route.name)" 
+  [routerLink]='route.url'
+  [routerLinkActive]="['selected']">{{route.name}}</div>
+</div>

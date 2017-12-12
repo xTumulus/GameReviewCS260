@@ -1,0 +1,55 @@
+<div id="home-container">
+  <div id="home-left" class="column">
+    <div id="featured" class="card">
+      <div id="featured-header" class="row">
+        <h2>Weekly Featured-</h2> <h3>Article Title</h3>
+      </div>
+      <div class="row">
+        <img src="./../assets/mascot.png" alt="article image" class="featured-image">
+        <p>This will have a large image  filling the entire left side with text to the right side</p>
+      </div>
+    </div>
+    <div class="row">
+      <div id="upcoming" class="card">
+        <div class="row">
+          <h2>Upcoming Reviews</h2>
+          <a routerLink="/upcoming">
+            <button class="button nav"> 
+              Vote Now <i class="material-icons">chevron_right</i>
+            </button>
+          </a>
+        </div>
+        <ol>
+          <li *ngFor="let item of upcomingReviews">{{item}}</li>
+        </ol>
+      </div>
+      <img src="./../assets/mascot.png" class="mascot-img" height='400px'>
+    </div>
+    <div class="row add-space">
+      <h2>Here is where we can put another ad</h2>
+    </div>
+  </div>
+  <div id="home-right" class="column">
+    <div class="recent-header">Recent Content</div>
+    <div id="recent">
+      <h4>Reviews</h4>
+      <!-- This should filter the last 5 that were published -->
+      <div class="article-container"*ngFor="let article of ArticleView">
+        <img src="./../assets/mascot.png" alt="image" width="50px" height="75px">
+        <div class="column article-info">
+          <a href="#">{{article.title}}- {{article.author}}</a>
+          <p>{{article.description}}</p>
+        </div>
+      </div>
+      <h4>Podcasts</h4>
+      <!-- This should filter the last 5 that were published -->
+      <div class="article-container" *ngFor="let podcast of podcastList">
+        <img src="./../assets/mascot.png" alt="image" width="50px" height="75px">
+        <div class="column article-info">
+          <a href="#">{{podcast.title}}</a>
+          <p>{{podcast.description}}</p>        
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>

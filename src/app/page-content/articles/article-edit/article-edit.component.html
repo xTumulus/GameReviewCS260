@@ -1,0 +1,42 @@
+<div class="edit-article">
+  <h2 *ngIf="isEdit">Edit an Article</h2>
+  <h2 *ngIf="!isEdit">Add an Article</h2>
+  <div class="input-group">
+    <label for="url">URL</label>
+    <input mdInput id="url" type="text" [(ngModel)]="url">
+
+    <label for="type">Type</label> <!-- This should be a drop-down -->
+    <input mdInput id="type" type="text" [(ngModel)]="type">
+
+    <label for="image">Image</label>
+    <input mdInput id="image" type="text" [(ngModel)]="image">
+
+    <label for="gameTitle">Game Title</label>
+    <input mdInput id="game-title" type="text" [(ngModel)]="gameTitle">
+
+    <label for="title">Title</label>
+    <input mdInput id="title" type="text" [(ngModel)]="title">
+
+    <label for="rating">Rating</label> <!-- This should be a drop-down -->
+    <input mdInput id="rating" type="text" [(ngModel)]="rating">
+
+    <label for="author">Author</label>
+    <input mdInput id="author" type="text" [(ngModel)]="author">
+
+    <label for="description">Description</label> <!--This should be limited to 140 char-->
+    <input mdInput id="description" type="text" placeholder="*limit- 140 char" [(ngModel)]="description">
+
+    <label for="article-content">Content</label>
+    <textarea mdInput rows="35" cols="10" id="article-content" [(ngModel)]="content"></textarea>
+  </div>
+  <div class="button-group left">
+    <button class="button secondary" (click)='onAddHeader()'>Header</button>
+    <button class="button secondary" (click)='onAddParagraph()'>Paragraph</button>
+    <button class="button secondary" (click)='onAddImage()'>Image</button>
+  </div>
+  <div class="button-group right">
+    <button class="button primary" (click)="onSaveArticle()">Save</button>
+    <button class="button nav">Cancel</button>
+    <!-- This should exit the modal (need some router stuff) -->
+  </div>
+</div>
